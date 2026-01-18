@@ -9,4 +9,4 @@ Collection of small frontend projects built using HTML, CSS, JavaScript, and Boo
 4. **Blogging Platform** – Basic blog page layout
 5. **Interactive Web Application (To-Do-List)** – Add, remove, and mark tasks
 
-Built using **HTML, CSS, JavaScript, and Bootstrap**.
+
