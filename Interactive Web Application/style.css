@@ -1,0 +1,241 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s, color 0.3s;
+}
+/* Dark mode */
+body.theme-dark {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #f3f4f6;
+}
+
+.app-container {
+    background: #ffffff;
+    padding: 30px;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+body.theme-dark .app-container h1 {
+    color: #f3f4f6; /* light heading for dark mode */
+}
+
+.header-top {
+    display: flex;
+    justify-content: center; /* center the heading */
+    align-items: center;
+    position: relative; /* to position toggle button */
+}
+
+.header-top h1 {
+    margin: 0 auto; /* keep heading in center */
+}
+
+.theme-btn {
+    position: absolute;
+    right: 0;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+}
+
+h1 {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+body.theme-dark .subtitle {
+    color: #d1d5db; /* lighter subtitle */
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #4f46e5;
+    color: #fff;
+    transition: 0.3s;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background: #4338ca;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #374151;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.filter-btn {
+    flex: 1;
+    margin: 0 4px;
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+.filter-btn.active {
+    background: #4f46e5;
+    color: #fff;
+}
+
+.filter-btn:hover {
+    background: #c7d2fe;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    background: #f3f4f6;
+    padding: 10px 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.task-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.task-time {
+    font-size: 10px;
+    color: #6b7280;
+}
+
+.delete-btn {
+    background: #ef4444;
+    padding: 6px 10px;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+.empty-state {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.clear-btn {
+    width: 100%;
+    background: #9ca3af;
+    margin-top: 15px;
+}
+
+.clear-btn:hover {
+    background: #6b7280;
+}
+
+.theme-dark body {
+    background: linear-gradient(135deg, #1f2937, #374151);
+}
+
+.theme-dark .app-container {
+    background: #1f2937;
+    color: #f3f4f6;
+}
+
+.theme-dark input {
+    background: #374151;
+    color: #f3f4f6;
+    border-color: #4b5563;
+}
+
+.theme-dark .filter-btn {
+    background: #4b5563;
+    color: #f3f4f6;
+}
+
+.theme-dark .filter-btn.active {
+    background: #6366f1;
+    color: #fff;
+}
+
+.theme-dark li {
+    background: #374151;
+    color: #f3f4f6;
+}
+
+.theme-dark li.completed span {
+    color: #9ca3af;
+}
+
+.theme-dark .delete-btn {
+    background: #dc2626;
+}
+
+.theme-dark .clear-btn {
+    background: #6b7280;
+}
+
+.theme-btn {
+    font-size: 18px;
+    background: transparent;
+}

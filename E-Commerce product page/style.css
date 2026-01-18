@@ -1,0 +1,265 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #0f172a;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HOME SECTION */
+.home {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.home-text {
+  margin-bottom: 400px;
+  text-align: center;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #38bdf8;
+  padding: 12px 25px;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 60px 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product button {
+  margin-top: 10px;
+  background: #0f172a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+/* BOOKING SECTION */
+.booking-section {
+  padding: 70px 20px;
+  background: #f4f6f8;
+}
+
+.booking-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.booking-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap; /* ensures elements wrap on smaller screens */
+}
+
+.customer-form,
+.order-summary {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  min-width: 300px; /* prevents shrinking too small */
+}
+
+.customer-form h3,
+.order-summary h3 {
+  margin-bottom: 20px;
+}
+
+.customer-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.customer-form input,
+.customer-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.customer-form textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* ORDER SUMMARY */
+#cart {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+#cart li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.payment h4 {
+  margin-bottom: 10px;
+}
+
+.payment label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pay-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background: #1e293b;
+}
+
+/* ABOUT SECTION */
+.about {
+  width: 60%;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  margin: 40px auto;
+}
+
+/* FOOTER */
+.footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about {
+    width: 80%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-text {
+    margin-bottom: 200px;
+    font-size: 18px;
+  }
+
+  .booking-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-text {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}

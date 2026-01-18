@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ElectroMart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo">ElectroMart</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#booking">Booking</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="home">
+  <div class="home-text">
+    <h1>Smart Electronics for Smart People</h1>
+    <p>Buy latest smartphones, laptops & accessories at best prices.</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </div>
+  <div class="home-img"></div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2>Our Products</h2>
+
+  <div class="product-grid">
+
+    <!-- SMARTPHONES -->
+    <div class="product" onclick="addToCart('iPhone 14 Pro', 429999)">
+      <img src="https://m.media-amazon.com/images/I/61XO4bORHUL._AC_SL1500_.jpg">
+      <h4>Apple iPhone 14 Pro</h4>
+      <p>Rs. 429,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('Samsung Galaxy S23 Ultra', 389999)">
+      <img src="https://m.media-amazon.com/images/I/61VfL-aiToL._AC_SL1500_.jpg">
+      <h4>Samsung Galaxy S23 Ultra</h4>
+      <p>Rs. 389,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('OnePlus 11 5G', 289999)">
+      <img src="https://m.media-amazon.com/images/I/61amb0CfMGL._AC_SL1500_.jpg">
+      <h4>OnePlus 11 5G</h4>
+      <p>Rs. 289,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('Xiaomi 13 Pro', 259999)">
+      <img src="https://m.media-amazon.com/images/I/61RvCwjI7dL._AC_SL1500_.jpg">
+      <h4>Xiaomi 13 Pro</h4>
+      <p>Rs. 259,999</p>
+      <button>Order</button>
+    </div>
+
+    <!-- LAPTOPS -->
+    <div class="product" onclick="addToCart('MacBook Air M2', 549999)">
+      <img src="https://m.media-amazon.com/images/I/71f5Eu5lJSL._AC_SL1500_.jpg">
+      <h4>MacBook Air M2</h4>
+      <p>Rs. 549,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('HP Pavilion 15', 289999)">
+    <img src="images/HP-Pavilion.jpg" alt="HP Pavilion 15">
+      <h4>HP Pavilion 15</h4>
+      <p>Rs. 289,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('Dell Inspiron 14', 279999)">
+    <img src="images/Dell-Inspiron 14.jpg" alt="Dell Inspiron 14">
+      <h4>Dell Inspiron 14</h4>
+      <p>Rs. 279,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('ASUS ROG Strix G15', 489999)">
+      <img src="https://m.media-amazon.com/images/I/71lYhcc++AL._AC_SL1500_.jpg">
+      <h4>ASUS ROG Strix G15</h4>
+      <p>Rs. 489,999</p>
+      <button>Order</button>
+    </div>
+
+    <!-- ACCESSORIES -->
+    <div class="product" onclick="addToCart('Sony WH-1000XM5', 149999)">
+    <img src="images/Sony WH-1000XM5.jpg" alt="Sony WH-1000XM5">
+      <h4>Sony WH-1000XM5</h4>
+      <p>Rs. 149,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('Apple Watch Series 8', 199999)">
+    <img src="images/Apple Watch Series 8.jpg" alt="Apple Watch Series 8">
+      <h4>Apple Watch Series 8</h4>
+      <p>Rs. 199,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('Samsung Galaxy Buds 2 Pro', 99999)">
+      <img src="https://m.media-amazon.com/images/I/61KVX-MbIUL._AC_SL1500_.jpg">
+      <h4>Galaxy Buds 2 Pro</h4>
+      <p>Rs. 99,999</p>
+      <button>Order</button>
+    </div>
+
+    <div class="product" onclick="addToCart('LG 55 Smart TV', 379999)">
+    <img src="images/LG 55 Smart TV.jpg" alt="LG 55 Smart TV">
+      <h4>LG 55” Smart TV</h4>
+      <p>Rs. 379,999</p>
+      <button>Order</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="booking" class="booking-section">
+
+  <h2>Booking & Checkout</h2>
+
+  <div class="booking-container">
+
+    <!-- CUSTOMER DETAILS -->
+    <div class="customer-form">
+      <h3>Customer Details</h3>
+
+      <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number" required>
+
+        <label>Address</label>
+        <textarea placeholder="Enter delivery address" required></textarea>
+      </form>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary">
+      <h3>Your Orders</h3>
+
+      <ul id="cart">
+        <!-- JS will insert ordered products here -->
+      </ul>
+
+      <div class="total">
+        <strong>Total:</strong> Rs. <span id="total">0</span>
+      </div>
+
+      <!-- PAYMENT OPTIONS -->
+      <div class="payment">
+        <h4>Payment Method</h4>
+
+        <label>
+          <input type="radio" name="payment" checked>
+          Cash on Delivery
+        </label>
+
+        <label>
+          <input type="radio" name="payment" disabled>
+          Card Payment (Coming Soon)
+        </label>
+
+        <button class="pay-btn">Proceed to Payment</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>
+    ElectroMart is a modern electronic store focused on delivering
+    high-quality gadgets with trusted brands. We believe technology
+    should be accessible, reliable, and exciting.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 ElectroMart | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

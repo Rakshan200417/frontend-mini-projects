@@ -1,0 +1,195 @@
+/* ===============================
+   ROOT VARIABLES (DARK TREND)
+================================ */
+:root {
+    --primary: #4f46e5;     /* Indigo */
+    --accent: #22d3ee;      /* Cyan */
+    --bg-main: #0f172a;     /* Dark navy */
+    --card-bg: #020617;     /* Deep dark */
+    --input-bg: #020617;
+    --border: #1e293b;
+    --text-main: #e5e7eb;
+    --text-muted: #94a3b8;
+    --success: #22c55e;
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   PAGE BACKGROUND
+================================ */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #020617, #0f172a, #020617);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===============================
+   FORM CARD
+================================ */
+.form-container {
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(180deg, #020617, #020617);
+    border-radius: var(--radius);
+    padding: 34px;
+    border: 1px solid var(--border);
+    box-shadow:
+        0 30px 70px rgba(79, 70, 229, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+/* ===============================
+   HEADER
+================================ */
+.form-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.form-container p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+}
+
+/* ===============================
+   FORM GROUP
+================================ */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+/* ===============================
+   INPUTS
+================================ */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--input-bg);
+    color: var(--text-main);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #64748b;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.25);
+}
+
+/* ===============================
+   RADIO & CHECKBOX
+================================ */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-size: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.button-group {
+    display: flex;
+    gap: 14px;
+    margin-top: 26px;
+}
+
+button {
+    flex: 1;
+    padding: 13px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #020617;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(34, 211, 238, 0.4);
+}
+
+.reset-btn {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+.reset-btn:hover {
+    background: #020617;
+}
+
+/* ===============================
+   SUCCESS MESSAGE
+================================ */
+.success-message {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--success);
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 26px;
+    }
+
+    .form-container h2 {
+        font-size: 21px;
+    }
+}
